@@ -22,3 +22,21 @@ WHILE "pesanan terpilih" = false
     STORE "pesanan" WITH "Pizza Margherita"
     STORE "pesanan terpilih" WITH true
 END
+
+DISPLAY "pesanan terpilih"
+
+READ AND WRITE "pembayaran" with Boolean
+READ AND WRITE "metode pembayaran" with string[]
+
+DISPLAY "Menghitung total harga pesanan"
+
+STORE "metode pembayaran" with [e-wallet, cash]
+IF "pembayaran" = TRUE
+    STORE "metode pembayaran" = "e-wallet"
+    DISPLAY "membayar dengan e-wallet"
+ELSE IF "pembayaran" = "FALSE"
+    STORE "metode pembayaran" = "cash"
+    DISPLAY "membayar dengan cash"
+ELSE "terjadi kesalahan"
+
+DISPLAY "Pesanan diterima"
