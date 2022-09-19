@@ -1,0 +1,15 @@
+READ and WRITE "lokasi" with string
+READ and WRITE "daftar lokasi restoran" with string[]
+READ AND WRITE "pesanan" with string
+READ AND WRITE "daftar menu" with string[]
+
+READ and WRITE "lokasi" ""
+STORE "daftar lokasi restoran" with [Domino Pizza, Pizza Hut]
+READ and WRITE "restoran terpilih" with Boolean
+
+WHILE "restoran terpilih" = false
+a STORE "lokasi" WITH "warmindo"
+a STORE "restoran terpilih" WITH true
+END
+
+DISPLAY "restoran terpilih"
