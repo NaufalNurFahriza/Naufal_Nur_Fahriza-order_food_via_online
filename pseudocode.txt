@@ -1,42 +1,43 @@
 READ and WRITE "lokasi" with string
 READ and WRITE "daftar lokasi restoran" with string[]
+READ and WRITE "restoran terpilih" with Boolean
+
 READ AND WRITE "pesanan" with string
 READ AND WRITE "daftar makanan" with string[]
+READ and WRITE "pesanan terpilih" with Boolean
+
+READ AND WRITE "Total pembayaran" with string
+READ AND WRITE "metode pembayaran" with string[]
+READ AND WRITE "pembayaran" with Boolean
+
 
 READ and WRITE "lokasi" ""
 STORE "daftar lokasi restoran" with [Domino Pizza, Pizza Hut]
-READ and WRITE "restoran terpilih" with Boolean
-
 WHILE "restoran terpilih" = false
     STORE "lokasi" WITH "Domino Pizza"
     STORE "restoran terpilih" WITH true
 END
-
 DISPLAY "restoran terpilih"
 
 READ and WRITE "pesanan" ""
 STORE "daftar makanan" with [Pizza Margherita, Pizza Pepperoni, Beef Lasagna]
-READ and WRITE "pesanan terpilih" with Boolean
-
 WHILE "pesanan terpilih" = false
     STORE "pesanan" WITH "Pizza Margherita"
     STORE "pesanan terpilih" WITH true
 END
-
 DISPLAY "pesanan terpilih"
 
-READ AND WRITE "pembayaran" with Boolean
-READ AND WRITE "metode pembayaran" with string[]
-
+STORE "pembayaran" WITH "35.000"
 DISPLAY "Menghitung total harga pesanan"
-
 STORE "metode pembayaran" with [e-wallet, cash]
 IF "pembayaran" = TRUE
     STORE "metode pembayaran" = "e-wallet"
     DISPLAY "membayar dengan e-wallet"
+    DISPLAY "Biaya total pesanan = 35.000"
 ELSE IF "pembayaran" = "FALSE"
     STORE "metode pembayaran" = "cash"
     DISPLAY "membayar dengan cash"
+    DISPLAY "Biaya total pesanan = 35.000"
 ELSE "terjadi kesalahan"
 
 DISPLAY "Pesanan diterima"
